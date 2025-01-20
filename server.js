@@ -21,7 +21,7 @@ app.use(metricsMiddleware);
 
 app.use("/user", userRoute);
 app.post("/task/:id", authenticateToken, enqueueTask);
-app.get('/metrics',metricsEndpoint);
+app.get('/metrics',authenticateToken,metricsEndpoint);
 
 
 app.use(errorLogger);
