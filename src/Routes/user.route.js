@@ -5,8 +5,6 @@ const userRoute = express.Router();
 
 userRoute.post("/signup", signup);
 userRoute.post("/login", login);
-userRoute.get("/home", authenticateToken, (req, res) => {
-  return res.send("This is homepage");
-});
+
 
 export default userRoute;
