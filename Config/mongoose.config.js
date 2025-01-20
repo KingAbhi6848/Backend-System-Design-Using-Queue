@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
+import { configDotenv } from "dotenv";
+configDotenv();
 
-mongoose.connect("mongodb://localhost:27017/backend-management");
+mongoose.connect(process.env.MONGO_URI);
 
 
 const db = mongoose.connection;
